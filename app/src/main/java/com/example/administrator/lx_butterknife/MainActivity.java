@@ -23,8 +23,9 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
-@UserBean(name = "Hello world") //自定义注解
+
 public class MainActivity extends AppCompatActivity {
+    @UserBean(name = "Hello world") //自定义注解
 
     @BindView(R.id.btn_circle_x)
     Button btnCircleX;
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,annotation.name(),Toast.LENGTH_SHORT).show();
             }
         }
+        Toast.makeText(this,"执行获取注解值这个方法了",Toast.LENGTH_SHORT).show();
     }
 
     private void initImageUrl() {
